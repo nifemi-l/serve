@@ -159,3 +159,58 @@ button:hover {
     font-size: 1.2em;
     z-index: 10; /* Ensure it's above other elements */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* For tablets */
+    .scoreboard, .score-button, button, .reset, .change-player-name, .undo, .match-point {
+        width: auto; /* Adjust width to fit smaller screens */
+        padding: 5px; /* Adjust padding */
+        font-size: 1em; /* Adjust font size */
+    }
+    .player h2, .score {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) { /* For mobile phones */
+    .scoreboard, .score-button, button, .reset, .change-player-name, .undo, .match-point {
+        width: auto; /* Adjust width for very small screens */
+        padding: 5px; /* Reduce padding */
+        font-size: 0.8em; /* Reduce font size */
+    }
+    .player h2, .score {
+        font-size: 1.5em; /* Further reduce font size for very small screens */
+    }
+    .bottom-buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+    }
+}
+/* Adjustments for common half-screen sizes on desktops */
+@media (max-width: 960px) { /* Half of a 1920px wide screen */
+    .scoreboard, .score-button, button, .reset, .change-player-name, .undo, .match-point {
+        /* Adjust styles for better fit */
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    .player h2, .score {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 683px) { /* Half of a 1366px wide screen */
+    .scoreboard, .score-button, button, .reset, .change-player-name, .undo, .match-point {
+        /* Further adjustments for smaller half-screens */
+        padding: 6px;
+        font-size: 0.8em;
+    }
+    .player h2, .score {
+        font-size: 1.6em;
+    }
+}
+
+/* Aspect ratio based adjustments for very narrow windows */
+@media (max-aspect-ratio: 3/4) {
+    .bottom-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+}
