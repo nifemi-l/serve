@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link href="styles.css" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Ping Pong Score Tracker</title>
+</head>
+<body>
+\    <div class="scoreboard"> <!-- Corrected class name to match CSS -->
+        <div class="player left" id="player1"> <!-- Added 'left' class for specific styling -->
+            <h2>Player 1</h2>
+            <p class="score" id="score1">0</p>
+            <button class="score-button" onclick="addScore(1)">Score!</button>
+        </div>
+        <div class="player right" id="player2"> <!-- Added 'right' class for specific styling -->
+            <h2>Player 2</h2>
+            <p class="score" id="score2">0</p>
+            <button class="score-button" onclick="addScore(2)">Score!</button>
+        <div class="match-point-display" id="matchPoint">Match Point: <span id="matchPointValue">21</span></div>
+        </div>
+    </div>
+    <div class="bottom-buttons"> <!-- Container for bottom buttons -->
+        <button class="change-player-name" onclick="changePlayerName()">Change Name</button>
+        <button class="reset" onclick="resetScore()">Reset</button>
+        <button class="undo" onclick="undoScore()">Undo</button>
+        <button class="match-point" onclick="matchPoint()">Change Match Point</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
