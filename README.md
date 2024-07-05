@@ -1,4 +1,3 @@
-![alt text](readme photo.webp)
 <div align="center">
   <img src="readme photo.webp" alt="alt text" />
 </div>
