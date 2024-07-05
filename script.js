@@ -14,7 +14,7 @@ function addScore(player) {
     let num = Number(score.textContent);
     score.textContent = num + 1;
     if (checkWin(player, num + 1)) {
-        // If the game is won, handle the win
+        // If the game is won, check win handles it
     } else if (num + 1 >= Records.userMatchPointTracker[0]) {
         alert('Please start a new game.');
     } else {
