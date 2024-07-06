@@ -11,7 +11,6 @@ The Ping Pong Score Tracker is an interactive web application designed to keep s
 - **Visual Feedback**: Offers visual cues for match points and winning moments.
 
 ## Screenshots
-**Initial 
 <div align="center">
   <img src="Main interface.png" alt="alt text" />
 </div>
