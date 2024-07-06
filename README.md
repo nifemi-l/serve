@@ -1,5 +1,23 @@
+# Ping Pong Score Tracker
+
+## Overview
+The Ping Pong Score Tracker is an interactive web application designed to keep score during ping pong matches. It features a vibrant user interface with red and blue themes representing each player. This tracker is built with HTML, CSS, and JavaScript and is ideal for personal use or at small-scale sports events.
+
+## Features
+- **Dynamic Score Updates**: Scores are updated in real-time with each player interaction. 
+- **Match Point Setting**: Users can set a custom match point to declare the winner.
+- **Name Customization**: Each player can customize their name on the scoreboard for personalization.
+- **Responsive Design**: The application is fully responsive and can be used across different devices and screen sizes.
+- **Visual Feedback**: Offers visual cues for match points and winning moments.
+
+## Screenshots
+**Initial 
 <div align="center">
-  <img src="readme photo.webp" alt="alt text" />
+  <img src="Main interface.png" alt="alt text" />
 </div>
 
-This is a dynamic web-based scoreboard application designed to track and display scores for two ping-pong players in real-time. Features include real-time score updates, customizable player names, match point settings, score history tracking with undo functionality, and visual alerts for game points and wins. Utilizes JavaScript for interactive elements and DOM manipulation to ensure a responsive and engaging user experience.
+## How to Use
+1. **Set Player Names**: Click on the 'Change Name' button and select the side to assign names.
+2. **Start Scoring**: Press the 'Score!' button to add points to the respective player’s score.
+3. **Set Match Points**: Adjust the match points by clicking 'Change Match Point' to set the game's winning criteria.
+4. **Reset Scores**: Use the 'Reset' button to reset scores for a new game.
