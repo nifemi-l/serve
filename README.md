@@ -10,7 +10,7 @@ The Ping Pong Score Tracker is an interactive web application designed to keep s
 - **Responsive Design**: The application is fully responsive and can be used across different devices and screen sizes.
 - **Visual Feedback**: Offers visual cues for match points and winning moments.
 
-## Screenshots
+## Main Interface
 <div align="center">
   <img src="Main interface.png" alt="alt text" />
 </div>
