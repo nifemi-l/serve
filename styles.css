@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 90%;  
-    min-height: 80vh;
+    min-height: 75vh;
     padding: 10px;
     box-shadow: 0 4px 80px rgba(0, 0, 0, 0.133);
     border-radius: 15px;
