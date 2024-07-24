@@ -16,7 +16,7 @@ The Ping Pong Score Tracker is an interactive web application designed to keep s
 </div>
 
 ## How to Use
-1. **Set Player Names**: Click on the 'Change Name' button and select the side to assign names.
+1. **Set Player Names**: Click on current player names, enter desired names.
 2. **Start Scoring**: Press the 'Score!' button to add points to the respective player’s score.
 3. **Set Match Points**: Adjust the match points by clicking 'Change Match Point' to set the game's winning criteria.
 4. **Reset Scores**: Use the 'Reset' button to reset scores for a new game.
