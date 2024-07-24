@@ -12,12 +12,20 @@ const gameLists = new Records();
 function addScore(player) {
     const score = document.getElementById(`score${player}`);
     let num = Number(score.textContent);
-    score.textContent = num + 1;
     if (checkWin(player, num + 1)) {
         // If the game is won, check win handles it
+        score.textContent = num + 1;
+        
+        // Pause, then clear scoreboard
+        setTimeout(()=> { 
+            console.log('Resetting score'); 
+            resetScore();
+        }, 5000);
+        
     } else if (num + 1 >= Records.userMatchPointTracker[0]) {
         alert('Please start a new game.');
     } else {
+        score.textContent = num + 1;
         Records.scoreHistory.push({ player: player, score: num + 1 });
     }
 }
@@ -25,15 +33,14 @@ function addScore(player) {
 /**
  * This function changes a player's name
  */
-function changePlayerName() { 
-    const userChoice = prompt('Left side (1) or Right side (2)?:'); 
-
-    if (userChoice != 1 && userChoice != 2) { 
-        alert('Invalid entry.')
-    } else {
-        let leftPlayer = document.querySelector('.player.left');
-        let rightPlayer = document.querySelector('.player.right');
-        
+function changePlayerName(location) { 
+    if (location == 'left') { 
+        var leftPlayer = document.querySelector('.player.left');
+        var userChoice = 1;
+    } else { 
+        var rightPlayer = document.querySelector('.player.right');
+        var userChoice = 2;
+    }
         const newName = prompt('Enter name:'); 
 
         if (!newName) { 
@@ -48,7 +55,6 @@ function changePlayerName() {
             }
         }
     }
-} 
 
 /** 
  * This function resets the score
@@ -77,17 +83,19 @@ function undoScore() {
 function matchPoint() { 
     const userMatchPoint = prompt('Enter match point:');
     let num = Number(userMatchPoint);
-    if (Number.isInteger(num) && num <= 21) { 
-        document.querySelector('#matchPointValue').textContent = num;
-
-        while (Records.userMatchPointTracker.length > 0) { 
-            Records.userMatchPointTracker.pop();
-        } 
-
-        Records.userMatchPointTracker.push(num);
+    if (!num) { 
+        alert('Entry cannot be empty.')
     } else { 
-        alert('Invalid entry.')
-    } 
+        if (Number.isInteger(num) && num <= 21) { 
+            document.querySelector('#matchPointValue').textContent = num;
+            while (Records.userMatchPointTracker.length > 0) { 
+                Records.userMatchPointTracker.pop();
+            } 
+            Records.userMatchPointTracker.push(num);
+        } else { 
+            alert('Invalid entry.')
+        } 
+    }
 }
 
 /**
@@ -133,7 +141,7 @@ function checkWin(playerId, playerScore) {
     }
     
     if (playerScore + 1 == gamePoint) {
-        showTemporaryMessage('Game Point!', 2000);
+        showTemporaryMessage('Game Point!', 1500);
         return false;
     } else if (playerScore == gamePoint) { 
         if (playerId == 1) { 
@@ -143,9 +151,7 @@ function checkWin(playerId, playerScore) {
         }
         
         let name = playerName.querySelector('h2').textContent
-
-        showTemporaryMessage(`${name} Wins!`, 10000);
-
+        showTemporaryMessage(`${name} Wins!`, 5000);
         return true; 
     } else { 
         return false;
