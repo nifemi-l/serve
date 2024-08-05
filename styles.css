@@ -13,6 +13,10 @@ body {
     padding: 0;
 }
 
+.wrapper { 
+    transform: scale(0.7);
+}
+
 .scoreboard {
     position: relative;
     display: flex;
@@ -27,7 +31,7 @@ body {
 
 .player {
     width: 90%;
-    min-height: 500px; /* This sets a minimum height, but the box can grow taller if needed */
+    min-height: 500px;
     text-align: center;
 }
 
@@ -37,7 +41,7 @@ body {
 
 .player h2 {
     font-size: 4em;
-    margin-bottom: 23px; /* Spacing below the player name */
+    margin-bottom: 23px; 
 }
 
 .score {
@@ -49,18 +53,19 @@ body {
 
 .score-button {
     font-size: 3em; 
-    padding: 20px 40px; /* Increase padding to provide more space for the text */
-    margin-top: 20px; /* Keep the space above the button */
-    background-color: #007bff; /* Keep the button color */
-    color: white; /* Keep the text color */
-    border: none; /* Keep the border removed */
-    border-radius: 5px; /* Keep the rounded corners */
-    cursor: pointer; /* Keep the cursor change on hover */
-    display: inline-block; /* Ensure the button doesn't stretch to full width */
-    text-align: center; /* Center the text inside the button */
-    width: auto; /* Allow the button to grow with the text */
-    box-sizing: border-box; /* Include padding and border in the button's total width and height */
+    padding: 20px 40px;
+    margin-top: 20px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    display: inline-block;
+    text-align: center; 
+    width: auto;
+    box-sizing: border-box; 
 }
+
 .score-button:hover { 
     background-color: #0e73df;
 }
@@ -87,7 +92,7 @@ body {
     background-size: cover;
     border: 9px solid #ffffff;
     border-style: dashed;
-    box-sizing: border-box; /* Fixes issue with the right side not showing */
+    box-sizing: border-box;
 }
 
 .undo {
@@ -99,6 +104,7 @@ body {
     cursor: pointer;
     padding: auto;
 }
+
 .undo:hover { 
     background-color: #0056b3;
 }
@@ -112,6 +118,7 @@ body {
     cursor: pointer;
     padding: auto;
 }
+
 .reset:hover {
     background-color: #c82333;
 }
@@ -125,6 +132,7 @@ body {
     cursor: pointer;
     padding: auto;
 } 
+
 .match-point:hover { 
     background-color: #c82333;
 }
@@ -139,60 +147,5 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 2em;
-    z-index: 10; /* Ensure it's above other elements */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) { /* For tablets */
-    .scoreboard, .score-button, button, .reset, .change-player-name, .undo, .match-point {
-        width: auto; /* Adjust width to fit smaller screens */
-        padding: 5px; /* Adjust padding */
-        font-size: 1em; /* Adjust font size */
-    }
-    .player h2, .score {
-        font-size: 2em; /* Adjust font size for smaller screens */
-    }
-}
-
-@media (max-width: 480px) { /* For mobile phones */
-    .scoreboard, .score-button, button, .reset, .change-player-name, .undo, .match-point {
-        width: auto; /* Adjust width for very small screens */
-        padding: 5px; /* Reduce padding */
-        font-size: 0.8em; /* Reduce font size */
-    }
-    .player h2, .score {
-        font-size: 1.5em; /* Further reduce font size for very small screens */
-    }
-    .bottom-buttons {
-        flex-direction: column; /* Stack buttons vertically on small screens */
-    }
-}
-/* Adjustments for common half-screen sizes on desktops */
-@media (max-width: 960px) { /* Half of a 1920px wide screen */
-    .scoreboard, .score-button, button, .reset, .change-player-name, .undo, .match-point {
-        /* Adjust styles for better fit */
-        padding: 8px;
-        font-size: 0.9em;
-    }
-    .player h2, .score {
-        font-size: 1.8em;
-    }
-}
-
-@media (max-width: 683px) { /* Half of a 1366px wide screen */
-    .scoreboard, .score-button, button, .reset, .change-player-name, .undo, .match-point {
-        /* Further adjustments for smaller half-screens */
-        padding: 6px;
-        font-size: 0.8em;
-    }
-    .player h2, .score {
-        font-size: 1.6em;
-    }
-}
-
-/* Aspect ratio based adjustments for very narrow windows */
-@media (max-aspect-ratio: 3/4) {
-    .bottom-buttons {
-        flex-direction: column; /* Stack buttons vertically */
-    }
+    z-index: 10;
 }
