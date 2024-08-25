@@ -12,19 +12,26 @@ const gameLists = new Records();
 function addScore(player) {
     const score = document.getElementById(`score${player}`);
     let num = Number(score.textContent);
+
     if (checkWin(player, num + 1)) {
         // If the game is won, check win handles it
         score.textContent = num + 1;
         
         // Pause, then clear scoreboard
         setTimeout(()=> { 
-            console.log('Resetting score'); 
             resetScore();
         }, 5000);
         
+        // Clear score history
+        while (Records.scoreHistory.length != 0) { 
+            Records.scoreHistory.pop();
+        }
     } else if (num + 1 >= Records.userMatchPointTracker[0]) {
         alert('Please start a new game.');
     } else {
+        if (num == 0) { 
+            Records.scoreHistory.push({player: player, score: num});
+        }
         score.textContent = num + 1;
         Records.scoreHistory.push({ player: player, score: num + 1 });
     }
@@ -68,7 +75,7 @@ function resetScore() {
  * This function undoes the score history
  */
 function undoScore() {
-    if (Records.scoreHistory.length > 0) { 
+    if (Records.scoreHistory.length > 0) {
         const lastAction = Records.scoreHistory.pop(); 
         const score = document.getElementById(`score${lastAction.player}`);
         score.textContent = lastAction.score;
@@ -141,7 +148,7 @@ function checkWin(playerId, playerScore) {
     }
     
     if (playerScore + 1 == gamePoint) {
-        showTemporaryMessage('Game Point!', 1500);
+        showTemporaryMessage('Game Point', 1500);
         return false;
     } else if (playerScore == gamePoint) { 
         if (playerId == 1) { 
