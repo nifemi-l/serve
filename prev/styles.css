@@ -1,0 +1,151 @@
+body {
+    background-image:url("ping_pong_background_image.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper { 
+    transform: scale(0.7);
+}
+
+.scoreboard {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;  
+    min-height: 75vh;
+    padding: 10px;
+    box-shadow: 0 4px 80px rgba(0, 0, 0, 0.133);
+    border-radius: 15px;
+    background-color: white; 
+}
+
+.player {
+    width: 90%;
+    min-height: 500px;
+    text-align: center;
+}
+
+.player.left { 
+    margin-left: .45%;
+}
+
+.player h2 {
+    font-size: 4em;
+    margin-bottom: 23px; 
+}
+
+.score {
+    font-size: 30em;
+    color: white;
+    padding: 30px 0;
+    margin: 0;
+}
+
+.score-button {
+    font-size: 3em; 
+    padding: 20px 40px;
+    margin-top: 20px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    display: inline-block;
+    text-align: center; 
+    width: auto;
+    box-sizing: border-box; 
+}
+
+.score-button:hover { 
+    background-color: #0e73df;
+}
+
+#player1 .score {
+    background-color: red;
+}
+
+#player2 .score {
+    background-color: blue;
+}
+
+.bottom-buttons {
+    height: 9.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    background-color: #22b2ef;
+    background-size: cover;
+    border: 9px solid #ffffff;
+    border-style: dashed;
+    box-sizing: border-box;
+}
+
+.undo {
+    width: auto;
+    font-size: 2em;
+    color: white;
+    background-color: #007BFF;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    padding: auto;
+}
+
+.undo:hover { 
+    background-color: #0056b3;
+}
+
+.reset {
+    width: auto;
+    font-size: 2em;
+    color: white;
+    border: 3px solid #ffffff;
+    background-color: red;
+    cursor: pointer;
+    padding: auto;
+}
+
+.reset:hover {
+    background-color: #c82333;
+}
+
+.match-point { 
+    width: auto;
+    font-size: 2em;
+    color: white;
+    border: 3px solid #ffffff;
+    background-color: red;
+    cursor: pointer;
+    padding: auto;
+} 
+
+.match-point:hover { 
+    background-color: #c82333;
+}
+
+.match-point-display {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #19ea0a;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 2em;
+    z-index: 10;
+}
